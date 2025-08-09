@@ -1,10 +1,10 @@
 [project]
 name = "cookiecutter-uv"
-version = "0.0.1"
+dynamic = ["version"]  # Remove static version and add this line
 description = "A python cookiecutter application to create a new python project that uses uv to manage its dependencies."
-authors = [{ name = "Florian Maas", email = "fpgmaas@gmail.com" }]
+authors = [{ name = "Bell Eapen", email = "github_public@gulfdoctor.net" }]
 readme = "README.md"
-keywords = ['cookiecutter', 'template', 'uv']
+keywords = ['healthcare', 'analytics', 'Gen AI', 'uv']
 requires-python = ">=3.9,<4.0"
 dependencies = [
   "cookiecutter>=2.1.1"
@@ -12,23 +12,21 @@ dependencies = [
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Software Development :: Code Generators",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Operating System :: OS Independent",
 ]
 
 
 [project.urls]
-Repository = "https://github.com/fpgmaas/cookiecutter-uv"
-Documentation = "https://fpgmaas.github.io/cookiecutter-uv/"
-Homepage = "https://fpgmaas.github.io/cookiecutter-uv/"
+Repository = "https://github.com/dermatologist"
+Documentation = "https://nuchange.ca"
+Homepage = "https://nuchange.ca"
 
 [dependency-groups]
 dev = [
@@ -46,8 +44,11 @@ dev = [
 ]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "uv-dynamic-versioning"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
 
 [tool.setuptools]
 packages = ["cookiecutter_uv"]
