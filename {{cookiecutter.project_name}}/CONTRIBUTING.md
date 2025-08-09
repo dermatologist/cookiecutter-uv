@@ -1,4 +1,4 @@
-# How to contribute
+# # Contributing to `{{cookiecutter.project_name}}`
 
 ## Please note:
 
@@ -11,9 +11,9 @@
 
 1. [Fork the repo](http://help.github.com/fork-a-repo) and clone it to your local computer, and set up the upstream remote:
 
-        git clone https://github.com/YourGithubUsername/cookiecutter-uv.git
-        cd cookiecutter-uv
-        git remote add upstream https://github.com/dermatologist/cookiecutter-uv.git
+        git clone https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}.git
+        cd {{cookiecutter.project_name}}
+        git remote add upstream https://github.com/dermatologist/{{cookiecutter.project_name}}.git
 
 2. Checkout out a new local branch based on your master and update it to the latest (BRANCH-123 is the branch name, You can name it whatever you want. Try to give it a meaningful name. If you are fixing an issue, please include the issue #).
 

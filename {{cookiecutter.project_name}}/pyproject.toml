@@ -56,7 +56,7 @@ publish-url = "https://test.pypi.org/legacy/"
 explicit = true
 
 #[project.scripts]
-#{{cookiecutter.project_slug}} = "{{cookiecutter.project_slug}}.main:cli"
+#{{cookiecutter.project_name}} = "{{cookiecutter.project_name}}.main:cli"
 
 #[project.optional-dependencies]
 #llm = [ "llama-index", "llama-index-experimental", "langchain", "langchain-community", "langchain-huggingface", "llama-index-embeddings-langchain", "overrides", "llama-index-llms-google-genai",]
