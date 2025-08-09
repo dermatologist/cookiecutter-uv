@@ -2,7 +2,7 @@ site_name: cookiecutter-uv
 repo_url: https://github.com/dermatologist/cookiecutter-uv
 site_url: https://dermatologist.github.io/cookiecutter-uv
 site_description: A cookiecutter template for Python projects that use uv for its dependency management
-site_author: Florian Maas
+site_author: Bell Eapen
 edit_uri: edit/main/docs/
 repo_name: dermatologist/cookiecutter-uv
 copyright: Maintained by <a href="https://dermatologist.com">Florian</a>.
