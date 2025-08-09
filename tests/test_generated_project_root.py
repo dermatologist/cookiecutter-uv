@@ -24,7 +24,6 @@ def test_full_structure(cookies, tmp_path):
         "README.md",
         "codecov.yaml",
         "docs",
-        "example_project",
         "mkdocs.yml",
         "pyproject.toml",
         "tests",
