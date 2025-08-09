@@ -55,6 +55,15 @@ url = "https://test.pypi.org/simple/"
 publish-url = "https://test.pypi.org/legacy/"
 explicit = true
 
+[tool.uv.build-backend]
+source-exclude = [
+  "tests/*",
+  "examples/*",
+  "docs/*",
+  "notes/*",
+  "notebooks/*"
+]
+
 #[project.scripts]
 #{{cookiecutter.project_name}} = "{{cookiecutter.project_name}}.main:cli"
 
