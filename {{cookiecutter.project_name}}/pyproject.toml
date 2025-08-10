@@ -105,6 +105,11 @@ python-version = "3.9"
 {%- endif %}
 
 [tool.pytest.ini_options]
+addopts = """
+--cov dhti_elixir_base --cov-report term-missing
+--verbose
+"""
+norecursedirs = ["dist", "build", ".tox"]
 testpaths = ["tests"]
 
 [tool.ruff]

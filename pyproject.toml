@@ -75,6 +75,11 @@ packages = ["cookiecutter_uv"]
 "cookiecutter_uv" = ["*"]
 
 [tool.pytest.ini_options]
+addopts = """
+--cov dhti_elixir_base --cov-report term-missing
+--verbose
+"""
+norecursedirs = ["dist", "build", ".tox"]
 testpaths = ["tests"]
 
 [tool.coverage.report]
