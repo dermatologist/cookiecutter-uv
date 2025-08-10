@@ -1,1 +1,1 @@
-import cookiecutter_uv
+import {{ cookiecutter.project_slug }}
