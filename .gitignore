@@ -139,6 +139,7 @@ cython_debug/
 
 # Exclude vscode config files
 .vscode/
+!{{cookiecutter.project_name}}/.vscode/
 
 # Exclude .DS_Store files from being added
 .DS_Store
