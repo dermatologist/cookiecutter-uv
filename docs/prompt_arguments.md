@@ -28,7 +28,7 @@ The project slug, will default to the `project_name` with all `-`'s
 replaced with `_`. This will be how you import your code later, e.g.
 
 ```python
-from <project_slug> import foo
+from <project_slug> import chain
 ```
 
 **project_description**
@@ -79,6 +79,10 @@ will be deployed to the `gh-pages` branch.
 **devcontainer**
 
 `"y"` or `"n"`. Adds a [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) specification to the project along with pre-installed pre-commit hooks and VSCode python extension configuration.
+
+**dhti**
+
+`"n"` or `"y"`. [Adds DHTI base](https://github.com/dermatologist/dhti-elixir-base).
 
 **open_source_license**
 
