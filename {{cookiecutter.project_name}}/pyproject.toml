@@ -55,6 +55,9 @@ url = "https://test.pypi.org/simple/"
 publish-url = "https://test.pypi.org/legacy/"
 explicit = true
 
+[tool.uv-dynamic-versioning]
+fallback-version = "0.1.0"
+
 [tool.uv.build-backend]
 source-exclude = [
   "tests/*",

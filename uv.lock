@@ -197,7 +197,7 @@ wheels = [
 
 [[package]]
 name = "cookiecutter-uv"
-version = "0.0.0.post115.dev0+36b88fc"
+version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "cookiecutter" },
