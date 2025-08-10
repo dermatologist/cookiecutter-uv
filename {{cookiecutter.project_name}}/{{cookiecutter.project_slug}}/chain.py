@@ -1,3 +1,4 @@
+{% if cookiecutter.dhti == "y" -%}
 from dhti_elixir_base import BaseChain, get_di
 from overrides import override
 from langchain.schema.output_parser import StrOutputParser
@@ -26,3 +27,22 @@ def chain(**kwargs):
         input (str): The text to summarize.
     """
     return TestChain().chain.invoke(kwargs)
+{%- elif cookiecutter.dhti == "n" -%}
+def chain(bar: str) -> str:
+    """Summary line.
+
+    Extended description of function.
+
+    Args:
+        bar: Description of input argument.
+
+    Returns:
+        Description of return value
+    """
+
+    return bar
+
+
+if __name__ == "__main__":  # pragma: no cover
+    pass
+{% endif %}
