@@ -47,6 +47,7 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.open_source_license}}" == "MIT license":
         move_file("LICENSE_MIT", "LICENSE")
+        remove_file("LICENSE_MPL")
         remove_file("LICENSE_BSD")
         remove_file("LICENSE_ISC")
         remove_file("LICENSE_APACHE")
@@ -55,6 +56,15 @@ if __name__ == "__main__":
     if "{{cookiecutter.open_source_license}}" == "BSD license":
         move_file("LICENSE_BSD", "LICENSE")
         remove_file("LICENSE_MIT")
+        remove_file("LICENSE_MPL")
+        remove_file("LICENSE_ISC")
+        remove_file("LICENSE_APACHE")
+        remove_file("LICENSE_GPL")
+
+    if "{{cookiecutter.open_source_license}}" == "MPL license":
+        move_file("LICENSE_MPL", "LICENSE")
+        remove_file("LICENSE_MIT")
+        remove_file("LICENSE_BSD")
         remove_file("LICENSE_ISC")
         remove_file("LICENSE_APACHE")
         remove_file("LICENSE_GPL")
@@ -62,6 +72,7 @@ if __name__ == "__main__":
     if "{{cookiecutter.open_source_license}}" == "ISC license":
         move_file("LICENSE_ISC", "LICENSE")
         remove_file("LICENSE_MIT")
+        remove_file("LICENSE_MPL")
         remove_file("LICENSE_BSD")
         remove_file("LICENSE_APACHE")
         remove_file("LICENSE_GPL")
@@ -69,6 +80,7 @@ if __name__ == "__main__":
     if "{{cookiecutter.open_source_license}}" == "Apache Software License 2.0":
         move_file("LICENSE_APACHE", "LICENSE")
         remove_file("LICENSE_MIT")
+        remove_file("LICENSE_MPL")
         remove_file("LICENSE_BSD")
         remove_file("LICENSE_ISC")
         remove_file("LICENSE_GPL")
@@ -76,6 +88,7 @@ if __name__ == "__main__":
     if "{{cookiecutter.open_source_license}}" == "GNU General Public License v3":
         move_file("LICENSE_GPL", "LICENSE")
         remove_file("LICENSE_MIT")
+        remove_file("LICENSE_MPL")
         remove_file("LICENSE_BSD")
         remove_file("LICENSE_ISC")
         remove_file("LICENSE_APACHE")

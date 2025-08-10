@@ -83,6 +83,6 @@ will be deployed to the `gh-pages` branch.
 **open_source_license**
 
 Choose a [license](https://choosealicense.com/). Options:
-`["1. MIT License", "2. BSD license", "3. ISC license",  "4. Apache Software License 2.0", "5. GNU General Public License v3", "6. Not open source"]`
+`["1. MIT License", "2. BSD license", "3. MPL license", "4. ISC license",  "5. Apache Software License 2.0", "6. GNU General Public License v3", "7. Not open source"]`
 
 ---
