@@ -19,6 +19,12 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+{% if cookiecutter.dhti == 'y' %}
+dependencies = [
+  "dhti-elixir-base"
+]
+{% endif %}
+
 [project.urls]
 Homepage = "https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/"
 Repository = "https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}"

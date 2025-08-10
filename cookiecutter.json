@@ -42,6 +42,10 @@
     "y",
     "n"
   ],
+  "dhti": [
+    "n",
+    "y"
+  ],
   "type_checker": [
     "mypy",
     "ty"

@@ -1,1 +1,1 @@
-::: {{cookiecutter.project_slug}}.foo
+::: {{cookiecutter.project_slug}}.chain
