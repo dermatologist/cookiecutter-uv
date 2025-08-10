@@ -216,7 +216,7 @@ def test_license_mpl(cookies, tmp_path):
         assert not os.path.isfile(f"{result.project_path}/LICENSE_GPL")
         with open(f"{result.project_path}/LICENSE", encoding="utf8") as licfile:
             content = licfile.readlines()
-            assert len(content) == 7
+            assert len(content) == 362
 
 
 def test_license_apache(cookies, tmp_path):
