@@ -4,7 +4,7 @@ import requests
 
 @pytest.fixture
 def chain():
-    from src.dhti_elixir_template import TestChain
+    from src.{{cookiecutter.project_slug}} import TestChain
     return TestChain().chain
 
 def test_chain(chain):
