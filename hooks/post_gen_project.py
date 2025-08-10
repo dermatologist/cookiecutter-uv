@@ -28,7 +28,7 @@ if __name__ == "__main__":
         remove_dir(".github")
     else:
         if "{{cookiecutter.mkdocs}}" != "y" and "{{cookiecutter.publish_to_pypi}}" == "n":
-            remove_file(".github/workflows/on-release-main.yml")
+            remove_file(".github/workflows/publish.yml")
 
     if "{{cookiecutter.mkdocs}}" != "y":
         remove_dir("docs")
@@ -36,6 +36,9 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.dockerfile}}" != "y":
         remove_file("Dockerfile")
+
+    if "{{cookiecutter.dhti}}" != "y":
+        remove_file("tests/bootstrap.py")
 
     if "{{cookiecutter.codecov}}" != "y":
         remove_file("codecov.yaml")
