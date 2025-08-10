@@ -19,7 +19,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-{% if cookiecutter.dhti == 'y' %}
+{% if cookiecutter.dhti == 'n' %}
 dependencies = [
   "dhti-elixir-base"
 ]
