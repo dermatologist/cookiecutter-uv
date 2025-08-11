@@ -39,6 +39,7 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.dhti}}" != "y":
         remove_file("tests/bootstrap.py")
+        remove_file("src/{{cookiecutter.project_slug}}/bootstrap.py")
 
     if "{{cookiecutter.codecov}}" != "y":
         remove_file("codecov.yaml")
