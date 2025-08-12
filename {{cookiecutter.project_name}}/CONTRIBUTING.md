@@ -1,4 +1,4 @@
-# # Contributing to `{{cookiecutter.project_name}}`
+# Contributing to `{{cookiecutter.project_name}}`
 
 ## Please note:
 

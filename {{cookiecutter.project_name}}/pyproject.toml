@@ -1,6 +1,6 @@
 [project]
 name = "{{cookiecutter.project_name}}"
-dynamic = ["version"]  # Remove static version and add this line
+dynamic = ["version"]  
 description = "{{cookiecutter.project_description}}"
 authors = [{ name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" }]
 readme = "README.md"
