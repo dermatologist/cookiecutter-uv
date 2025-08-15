@@ -5,11 +5,12 @@ site_description: {{cookiecutter.project_description}}
 site_author: {{cookiecutter.author}}
 edit_uri: edit/main/docs/
 repo_name: {{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
-copyright: Maintained by <a href="https://{{cookiecutter.author_github_handle}}.com">{{cookiecutter.author_github_handle}}</a>.
+copyright: Maintained by <a href="https://github.com/{{cookiecutter.author_github_handle}}">{{cookiecutter.author_github_handle}}</a>.
 
 nav:
   - Home: index.md
   - Modules: modules.md
+  - Contributing: contributing.md
 plugins:
   - search
   - mkdocstrings:
@@ -50,6 +51,10 @@ extra:
       link: https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/{{cookiecutter.project_name}}
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/beapen
+    - icon: fontawesome/classic/house
+      link: https://nuchange.ca
 
 markdown_extensions:
   - toc:
