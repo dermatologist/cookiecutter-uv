@@ -53,7 +53,7 @@ extra:
       link: https://pypi.org/project/{{cookiecutter.project_name}}
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/beapen
-    - icon: fontawesome/classic/house
+    - icon: fontawesome/solid/home
       link: https://nuchange.ca
 
 markdown_extensions:
