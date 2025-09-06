@@ -41,6 +41,23 @@ if __name__ == "__main__":
         remove_file("tests/bootstrap.py")
         remove_file("{{cookiecutter.project_slug}}/bootstrap.py") # src is created later
 
+    if "{{cookiecutter.mcp}}" == "y":
+        # remove_file("tests/bootstrap.py") # Done above
+        remove_file("tests/test_chain.py")
+        remove_file(
+            "{{cookiecutter.project_slug}}/chain.py"
+        )
+        # remove_file(
+        #     "{{cookiecutter.project_slug}}/bootstrap.py"
+        # )  # done above
+        # Copy mcp directory in parent directory to src
+        move_dir("mcp", os.path.join("src", "{{cookiecutter.project_slug}}", "mcp"))
+        # Replace Dockerfile with the one in this directory
+        move_file(
+            os.path.join("src", "{{cookiecutter.project_slug}}", "Dockerfile"),
+            "Dockerfile",
+        )
+
     if "{{cookiecutter.codecov}}" != "y":
         remove_file("codecov.yaml")
         if "{{cookiecutter.include_github_actions}}" == "y":

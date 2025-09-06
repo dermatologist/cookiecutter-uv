@@ -1,17 +1,24 @@
-# Use an official Python runtime as a parent image
-FROM python:3.12-slim-buster
+# Install uv
+FROM python:3.12-slim
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
-# Set the working directory in the container
+# Change the working directory to the `app` directory
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copy the lockfile and `pyproject.toml` into the image
+COPY uv.lock /app/uv.lock
+COPY pyproject.toml /app/pyproject.toml
+
+# Install dependencies
+RUN uv sync --frozen --no-install-project
+
+# Copy the project into the image
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -e .
+# Sync the project
+RUN uv sync --frozen
 
 # Expose the port the MCP server listens on (e.g., 5000)
 EXPOSE 5000
 
-# Define the command to run the MCP server
-CMD ["your-package-name"]
+CMD [ "{{cookiecutter.project_name}}" ]
