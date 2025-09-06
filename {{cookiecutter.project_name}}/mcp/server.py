@@ -1,5 +1,5 @@
 import logging
-
+import os
 import click
 from mcp.server.fastmcp.server import FastMCP
 
@@ -29,21 +29,21 @@ def register_mcp_tools(mcp: FastMCP) -> None:
 @click.option(
     "--transport",
     type=click.Choice(["stdio", "sse", "streamable-http"]),
-    default="stdio",
+    default=os.getenv("TRANSPORT", "stdio"),
     show_default=True,
     help="Transport protocol to use",
 )
 @click.option(
     "--log-level",
     type=click.Choice(["DEBUG", "INFO", "WARN", "ERROR"], case_sensitive=False),
-    default="DEBUG",
+    default=os.getenv("LOG_LEVEL", "INFO"),
     show_default=True,
     help="Log level to use",
 )
 @click.option(
     "--disable-auth",
     is_flag=True,
-    default=True,
+    default=os.getenv("DISABLE_AUTH", "True").lower() in ("true", "1", "t"),
     show_default=True,
     help="Disable authorization between MCP client and MCP server. [default: False]",
 )
