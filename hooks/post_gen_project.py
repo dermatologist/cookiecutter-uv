@@ -22,6 +22,8 @@ def move_file(filepath: str, target: str) -> None:
 def move_dir(src: str, target: str) -> None:
     shutil.move(os.path.join(PROJECT_DIRECTORY, src), os.path.join(PROJECT_DIRECTORY, target))
 
+def copy_dir(src: str, target: str) -> None:
+    shutil.copytree(os.path.join(PROJECT_DIRECTORY, src), os.path.join(PROJECT_DIRECTORY, target))
 
 if __name__ == "__main__":
     if "{{cookiecutter.include_github_actions}}" != "y":
@@ -51,10 +53,11 @@ if __name__ == "__main__":
         #     "{{cookiecutter.project_slug}}/bootstrap.py"
         # )  # done above
         # Copy mcp directory in parent directory to src
-        move_dir("mcp", os.path.join("src", "{{cookiecutter.project_slug}}", "mcp"))
+        remove_dir("{{cookiecutter.project_slug}}")
+        copy_dir("mcp", "{{cookiecutter.project_slug}}")
         # Replace Dockerfile with the one in this directory
         move_file(
-            os.path.join("src", "{{cookiecutter.project_slug}}", "Dockerfile"),
+            os.path.join("{{cookiecutter.project_slug}}", "Dockerfile"),
             "Dockerfile",
         )
 

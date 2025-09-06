@@ -21,4 +21,5 @@ RUN uv sync --frozen
 # Expose the port the MCP server listens on (e.g., 5000)
 EXPOSE 5000
 
-CMD [ "{{cookiecutter.project_name}}" ]
+# uv run server.py
+CMD [ "python", "{{cookiecutter.project_slug}}/server.py" ]

@@ -70,3 +70,6 @@ def main(click_ctx: click.Context, transport, log_level, disable_auth) -> int:
         )
         return 1
     return 0
+
+if __name__ == "__main__":
+    main()
