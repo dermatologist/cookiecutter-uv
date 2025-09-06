@@ -29,14 +29,14 @@ def register_mcp_tools(mcp: FastMCP) -> None:
 @click.option(
     "--transport",
     type=click.Choice(["stdio", "sse", "streamable-http"]),
-    default="streamable-http",
+    default="stdio",
     show_default=True,
     help="Transport protocol to use",
 )
 @click.option(
     "--log-level",
     type=click.Choice(["DEBUG", "INFO", "WARN", "ERROR"], case_sensitive=False),
-    default="INFO",
+    default="DEBUG",
     show_default=True,
     help="Log level to use",
 )

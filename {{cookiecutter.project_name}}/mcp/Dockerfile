@@ -18,8 +18,8 @@ COPY . /app
 # Sync the project
 RUN uv sync --frozen
 
-# Expose the port the MCP server listens on (e.g., 5000)
-EXPOSE 5000
+# Expose the port the MCP server listens on (e.g., 8000)
+EXPOSE 8000
 
 # uv run server.py
-CMD [ "python", "{{cookiecutter.project_slug}}/server.py" ]
+CMD [ "uv", "run", "src/{{cookiecutter.project_slug}}/server.py" ]
