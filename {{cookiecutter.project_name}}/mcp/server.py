@@ -57,8 +57,7 @@ def main(click_ctx: click.Context, transport, log_level, disable_auth) -> int:
     click_ctx.obj["disable_auth"] = disable_auth
 
     logging.basicConfig(
-        level=getattr(logging, log_level.upper()),
-        format="[%(asctime)s] %(levelname)s {%(name)s.%(funcName)s:%(lineno)d} - %(message)s",
+        level=getattr(logging, log_level.upper())
     )
     try:
         mcp: FastMCP = configure_mcp_server(disable_auth)
