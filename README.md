@@ -23,6 +23,8 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 - Containerization with [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
 - Development environment with [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)
 
+## A fork of the original repository for scaffolding [DHTI](https://github.com/dermatologist/dhti) Elixirs and MCP server projects.
+
 ---
 
 <p align="center">
