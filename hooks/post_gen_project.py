@@ -41,7 +41,11 @@ if __name__ == "__main__":
 
     if "{{cookiecutter.dhti}}" != "y":
         remove_file("tests/bootstrap.py")
-        remove_file("{{cookiecutter.project_slug}}/bootstrap.py") # src is created later
+        remove_file("tests/server.py")
+        remove_file("tests/test.http")
+        remove_file(
+            "{{cookiecutter.project_slug}}/bootstrap.py"
+        )  # src is created later
 
     if "{{cookiecutter.mcp}}" == "y":
         # remove_file("tests/bootstrap.py") # Done above
