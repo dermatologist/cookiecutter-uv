@@ -64,6 +64,9 @@ if __name__ == "__main__":
             os.path.join("{{cookiecutter.project_slug}}", "Dockerfile"),
             "Dockerfile",
         )
+        remove_dir("mcp")
+    else:
+        remove_dir("mcp")
 
     if "{{cookiecutter.codecov}}" != "y":
         remove_file("codecov.yaml")
