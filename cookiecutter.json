@@ -7,7 +7,8 @@
   "project_description": "This is a template repository for Python projects that use uv for their dependency management.",
   "_copy_without_render": [
     ".github/workflows/publish.yml",
-    ".github/workflows/bump.yml"
+    ".github/workflows/bump.yml",
+    "tests/bootstrap.py"
   ],
   "layout": [
     "src",
