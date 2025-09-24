@@ -12,7 +12,7 @@ from langchain.tools import tool
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class TestChain(BaseChain):
+class DhtiChain(BaseChain):
 
     @property
     @override
@@ -25,7 +25,7 @@ class TestChain(BaseChain):
 # Named chain according to the langchain template convention
 # The description is used by the agents
 # This is only in the inherited class, not in the base class
-@tool(TestChain().name or "test_chain", args_schema=TestChain().input_type)
+@tool(DhtiChain().name or "test_chain", args_schema=DhtiChain().input_type)
 def chain(**kwargs):
     """
     This is a template chain that takes a text input and returns a summary of the text.
@@ -33,7 +33,7 @@ def chain(**kwargs):
     The input is a dict with the following mandatory keys:
         input (str): The text to summarize.
     """
-    return TestChain().chain.invoke(kwargs)
+    return DhtiChain().chain.invoke(kwargs)
 {%- elif cookiecutter.dhti == "n" -%}
 def chain(bar: str) -> str:
     """Summary line.

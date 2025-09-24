@@ -5,8 +5,8 @@ import requests
 
 @pytest.fixture
 def chain():
-    from src.{{cookiecutter.project_slug}} import TestChain
-    return TestChain().chain
+    from src.{{cookiecutter.project_slug}} import DhtiChain
+    return DhtiChain().chain
 
 def test_chain_invoke(chain, capsys):
     input_data = {"input": "Answer in one word: What is the capital of France?"}

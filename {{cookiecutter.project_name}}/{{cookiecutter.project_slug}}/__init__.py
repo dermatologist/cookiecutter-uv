@@ -1,4 +1,4 @@
 {% if cookiecutter.dhti == 'y' %}
-from .chain import TestChain
-__all__ = ["TestChain"]
+from .chain import DhtiChain
+__all__ = ["DhtiChain"]
 {% endif %}
