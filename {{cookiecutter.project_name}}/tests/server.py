@@ -14,9 +14,9 @@ from bootstrap import bootstrap as {{cookiecutter.project_slug}}_bootstrap
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
-from {{cookiecutter.project_slug}}.chain import TestChain
-{{cookiecutter.project_slug}}_chain = TestChain().get_chain_as_langchain_tool()
-{{cookiecutter.project_slug}}_mcp_tool = TestChain().get_chain_as_mcp_tool
+from {{cookiecutter.project_slug}}.chain import DhtiChain as {{cookiecutter.project_slug}}_chain_class
+{{cookiecutter.project_slug}}_chain = {{cookiecutter.project_slug}}_chain_class().get_chain_as_langchain_tool()
+{{cookiecutter.project_slug}}_mcp_tool = {{cookiecutter.project_slug}}_chain_class().get_chain_as_mcp_tool
 
 import uvicorn
 
