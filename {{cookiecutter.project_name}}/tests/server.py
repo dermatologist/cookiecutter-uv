@@ -71,6 +71,7 @@ except:
     # ! DO NOT REMOVE THE COMMENT BELOW
     # DHTI_NORMAL_ROUTE
     add_routes(app, {{cookiecutter.project_slug}}_chain, path="/langserve/{{cookiecutter.project_slug}}")
+    x = True
 
 # ! DO NOT REMOVE THE COMMENT BELOW
 # DHTI_COMMON_ROUTE
