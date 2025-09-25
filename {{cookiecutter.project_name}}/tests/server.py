@@ -56,8 +56,8 @@ try:
     from langfuse import Langfuse
     from langfuse.callback import CallbackHandler
 
-    langfuse_handler.auth_check()
     langfuse_handler = CallbackHandler()
+    langfuse_handler.auth_check()
     config = RunnableConfig(callbacks=[langfuse_handler])
     # ! DO NOT REMOVE THE COMMENT BELOW
     # DHTI_LANGFUSE_ROUTE
@@ -71,7 +71,6 @@ except:
     # ! DO NOT REMOVE THE COMMENT BELOW
     # DHTI_NORMAL_ROUTE
     add_routes(app, {{cookiecutter.project_slug}}_chain, path="/langserve/{{cookiecutter.project_slug}}")
-    x = True
 
 # ! DO NOT REMOVE THE COMMENT BELOW
 # DHTI_COMMON_ROUTE
